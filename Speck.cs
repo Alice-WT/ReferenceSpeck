@@ -85,17 +85,9 @@ namespace Alice.Security.Cryptography
             y = RotL64(y, 3);
             y ^= x;
         }
-        private static UInt64 RotL32(UInt64 x, int r)
-        {
-            return ((x << r) | (x >> (32 - r)));
-        }
         private static UInt64 RotL64(UInt64 x, int r)
         {
             return ((x << r) | (x >> (64 - r)));
-        }
-        private static UInt64 RotR32(UInt64 x, int r)
-        {
-            return ((x >> r) | (x << (32 - r)));
         }
         private static UInt64 RotR64(UInt64 x, int r)
         {
